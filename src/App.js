@@ -14,7 +14,7 @@ class App extends React.Component{
     handleSubmit = async (values) => {
         const { city } = values;
         const lang = /^[a-z-]+$/i.test(city) ? "en" : "ru";
-        const apiURL = await fetch(`http://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${APIkey}&units=metric&lang=${lang}`);
+        const apiURL = await fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${APIkey}&units=metric&lang=${lang}`);
         const data = await apiURL.json();
         console.log(data);
 
